@@ -1,0 +1,43 @@
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col style="text-align: center">
+        <!-- Title -->
+        <h1>{{ title }}</h1>
+      </ion-col>
+    </ion-row> 
+    <ion-row>
+      <ion-col center>
+        <!-- Initial state -->
+        <div *ngIf="showInitial">
+          <div style="text-align: center">
+            <h5 class="">Descubra os números da Mega-Sena</h5>
+          </div>
+          <br><br>
+          <div style="text-align: center">
+            <button ion-button (click)="toggle()">Descobrir</button>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Complete state -->
+  <div *ngIf="showComplete" class="">
+    <h4>{{ lottoNumbers }}</h4>
+  </div>
+  <br><br>
+
+  <!-- Donate button -->
+  <div class="" *ngIf="showComplete">
+    <br><br>
+    <h5 class="header col s12 light">Não se esqueça dos 10% dos astros!</h5>
+    <br><br>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <input type="hidden" name="cmd" value="_s-xclick">
+    <input type="hidden" name="hosted_button_id" value="7BEXA88LESJ58">
+    <input type="image" src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - A maneira fácil e segura de enviar pagamentos online!">
+    <img alt="" border="0" src="https://www.paypalobjects.com/pt_BR/i/scr/pixel.gif" width="1" height="1">
+    </form>
+  </div>
+</ion-content>
