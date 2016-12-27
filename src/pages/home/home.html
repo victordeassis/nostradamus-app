@@ -1,20 +1,20 @@
 <ion-content padding>
   <ion-grid>
     <ion-row>
-      <ion-col style="text-align: center">
+      <ion-col class="center center-vertically">
         <!-- Title -->
         <h1>{{ title }}</h1>
       </ion-col>
     </ion-row> 
     <ion-row>
-      <ion-col center>
+      <ion-col class="center">
         <!-- Initial state -->
         <div *ngIf="showInitial">
-          <div style="text-align: center">
-            <h5 class="">Descubra os números da Mega-Sena</h5>
+          <div>
+            <h4 class="">Descubra os números da Mega-Sena</h4>
           </div>
           <br><br>
-          <div style="text-align: center">
+          <div>
             <button ion-button (click)="toggle()">Descobrir</button>
           </div>
         </div>
@@ -23,13 +23,13 @@
   </ion-grid>
 
   <!-- Complete state -->
-  <div *ngIf="showComplete" class="">
+  <div *ngIf="showComplete" class="center">
     <h4>{{ lottoNumbers }}</h4>
   </div>
   <br><br>
 
   <!-- Donate button -->
-  <div class="" *ngIf="showComplete">
+  <div class="center" *ngIf="showComplete">
     <br><br>
     <h5 class="header col s12 light">Não se esqueça dos 10% dos astros!</h5>
     <br><br>

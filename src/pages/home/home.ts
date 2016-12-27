@@ -57,7 +57,6 @@ export class HomePage {
 
   // Function that activates when the 'descobrir' button is clicked
   toggle() {
-		this.showInitial = false;
 		// this.title = "Consultando os astros";
 
     // Calling the loader and generating the numbers
@@ -68,6 +67,7 @@ export class HomePage {
     loader.present();
     
     setTimeout(() => {
+      this.showInitial = false;
       this.title = "Os números são";
 			this.showComplete = true;
       this.lottoNumbers = this.randomNumbers();
