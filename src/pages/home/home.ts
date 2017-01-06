@@ -74,4 +74,13 @@ export class HomePage {
     }, 3000);
 	}
 
+  restart() {
+
+    this.showComplete = false;
+    this.showInitial = true;
+    this.lottoNumbers = "";
+    this.title = "Nostradamus";
+
+  }
+
 }
